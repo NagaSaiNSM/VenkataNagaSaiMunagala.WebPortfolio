@@ -1,0 +1,82 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+
+body {
+    margin: 0;
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 300;
+    font-size: 16px; /* Adjusted default font size for better readability */
+    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .fixed-header {
+        font-size: 11px; /* Adjust the font size for smaller screens */
+    }
+
+    .data h1 {
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+}
+/* Style for the horizontal menu */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.fixed-header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.fixed-header a:hover {
+    background-color: #555;
+}
+
+.left-section {
+    margin-left: 10px;
+}
+
+.right-section {
+    margin-right: 10px;
+}
+
+.data {
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+}
+
+.maindata {
+    width: 90%; /* Adjusted width for better responsiveness */
+    margin: 20px auto; /* Center the content */
+    text-align: justify;
+}
+
+iframe {
+    max-width: 100%; /* Ensure iframes don't exceed their container width */
+    height: auto; /* Adjusted height for better visibility */
+    margin: 0 auto; /* Center the iframe */
+}

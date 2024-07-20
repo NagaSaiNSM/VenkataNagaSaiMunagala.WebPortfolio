@@ -25,22 +25,42 @@
 }
 
 .myImage {
-    margin-top: 5px;
+    margin-top: 50px;
     margin-right: 20px;
     /* Set a fixed width for larger screens */
     width: 200px;
 }
+.image_main img{
+	width: auto;
+	height: 300px;
+}
+
 
 /* Media query for smaller screens */
 @media screen and (max-width: 600px) {
     .aboutme {
         flex-direction: column; /* Stack elements on smaller screens */
     }
-
+	.content{
+		max-width: 50%; width: 100%;
+		margin: 0 auto;
+	}
     .myImage {
-        /* Adjust the width for smaller screens */
-        width: 100%;
-        margin-right: 0; /* Remove right margin on smaller screens */
+		margin-top: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.image_main img{
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		display: block; /* Ensure the image is treated as a block element */
+        margin: 0 auto;
+	}
+	
+
     }
 
     /*.Resume {
@@ -48,7 +68,7 @@
 		font-family: "Merriweather", Georgia, serif;
 		font-weight: 300;
     }*/
-}
+
 
 /*.Resume {
     margin-left: 70px;
@@ -83,9 +103,7 @@
         flex-direction: column; /* Stack items on smaller screens */
         align-items: center; /* Center items vertically on smaller screens */
     }
-	.myImage{
-		margin-top: 5px;
-	}
+
     .actions.special li img {
         max-width: 10%; /* Make the image responsive */
         height: auto; /* Maintain aspect ratio */
@@ -130,7 +148,7 @@
             </div>-->
 			<div class="right-section">
 				<a href="index.html">Home</a>
-				<a href="contact.html" target="_blank">Contact</a>
+				<a href="contact.html">Contact</a>
 				<div class="dropdown">
 					<a href="#">More</a>
 					<div class="dropdown-content">
@@ -221,8 +239,8 @@
 									</p>
 								</header>
 								<div class="content">
-									<div class="myImage" style="margin-top: 50px;">
-										<a href="#" class="image_main"><img src="images/MyImage.jpg" alt="My Image" height="300"  /></a>
+									<div class="myImage">
+										<a href="#" class="image_main"><img src="images/MyImage.jpg" alt="My Image"   /></a>
 									</div>
 									<!--<div class="Resume">
 										<p><a href="https://1drv.ms/b/s!Akih6QLLmdZ5gfFEyROlw_2YEh4h-g?e=2ZQB1k" target="_blank" download="Venkata Naga Sai Munagala Resume.pdf" class="button small">Resume</a>
@@ -238,7 +256,7 @@
 									<header>
 										<h2><a href="TelanganaGovernmentAnalysis.html">Unlocking Growth: Strategic Insights for Telangana Government</a></h2>
 									</header>
-									<a href="TelanganaGovernmentAnalysis.html" class="image fit"><img src="images/Telangana.png" alt=""  height="auto"/></a>
+									<a href="TelanganaGovernmentAnalysis.html" class="image fit"><img src="images/Telanagana Banner.png" alt=""  height="auto"/></a>
 									<p>Passionate about data-driven insights, I participated in Code Basics Resume Project Challenge 7 with the 
 										Codebasics team. Using tools like PowerBI,Excel and Power Point, I analyzed and presented crucial trends for the Telangana Government. From pinpointing key insights to proposing sustainable strategies, I thrive on leveraging data for impactful decision-making.</p>
 									<ul class="actions special">
@@ -250,7 +268,7 @@
 										<h2><a href="CodeX.html">Provide Insights to the Marketing Team in Food & Beverage Industry
 										</a></h2>
 									</header>
-									<a href="CodeX.html" class="image fit"><img src="images/CodeX.png" alt="" height="auto" /></a>
+									<a href="CodeX.html" class="image fit"><img src="images/CodeX Banner.png" alt="" height="auto" /></a>
 									<p>Focused on data-driven marketing analysis, I contributed to CodeX's expansion strategy for the 
 										Indian market in Codebasics Resume Project Challenge #6. Leveraging tools like Microsoft Power BI 
 										and Canva, I decoded survey insights to boost brand visibility. From enhancing customer satisfaction to proposing innovative ambassador programs</p>
@@ -260,10 +278,20 @@
 								</article>
 								<article>
 									<header>
+										<h2><a href="YoutubeAnalysis.html">Sentiment & Emoji analysis</a></h2>
+									</header>
+									<a href="YoutubeAnalysis.html" class="image fit"><img src="images/Youtube Data Analysis Banner.png" alt=""  height="auto"/></a>
+									<p>The YouTube Data Analysis project leverages Python to perform in-depth analysis of YouTube comments. By using libraries such as Pandas, NumPy, TextBlob, and Matplotlib, the project cleans and processes the data, conducts sentiment analysis, and generates word clouds and emoji frequency visualizations. This analysis provides insights into user sentiments, popular keywords, and emoji usage patterns in YouTube interactions.</p>
+									<ul class="actions special">
+										<li><img src="images/Python.png" alt="" /></li>							
+									</ul>
+								</article>
+								<article>
+									<header>
 										<h2><a href="Dannys_Dinner.html">Dannys Dinner<br />
 										</a></h2>
 									</header>
-									<a href="Dannys_Dinner.html" class="image fit"><img src="images/Dannys DInner.png" alt="" height="auto"/></a>
+									<a href="Dannys_Dinner.html" class="image fit"><img src="images/Dannys Dinner Banner.png" alt="" height="auto"/></a>
 									<p>Within the framework of Danny Ma's 8 Week SQL Challenge, I have successfully accomplished the Initial Challenge, focusing on Danny's Dinner. Throughout this endeavor, I methodically navigated a sophisticated data environment, utilizing Common Table Expressions (CTEs), aggregate functions, and window functions to derive actionable insights from a restaurant's database. This practical engagement significantly enhanced my problem-solving acumen and enriched my comprehension of database management. </p>
 									<ul class="actions special">
 										<li><img src="images/SQL.png" alt="" /></li>
@@ -275,7 +303,7 @@
 										<h2><a href="Pizza Runner.html">Pizza Runner<br />
 										</a></h2>
 									</header>
-									<a href="Pizza Runner.html" class="image fit"><img src="images/Pizza Runner.png" alt="" height="auto"/></a>
+									<a href="Pizza Runner.html" class="image fit"><img src="images/Pizza Runner Banner.png" alt="" height="auto"/></a>
 									<p>Successfully addressing the #PizzaRunnerChallenge in Danny Ma's #8WeekSQLChallenge, my focus was on refining Pizza Runner's operations through data science. Rigorous data cleansing ensured precision in analyses, contributing to strategic decision-making. The findings encompass a devoted customer base, operational nuances, delivery dynamics, and a detailed financial snapshot.<br/><br/><br/></p>
 									<ul class="actions special">
 										<li><img src="images/SQL.png" alt="" /></li>
@@ -285,7 +313,7 @@
 									<header>
 										<h2><a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9jNrIed7huFCu4rg?e=cO5KJj" target="_blank" >Swiggy Order Analysis</a></h2>
 									</header>
-									<a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9jNrIed7huFCu4rg?e=cO5KJj" target="_blank" class="image fit"><img src="images/Swiggy order Analysis.JPG" alt="" height="auto" /></a>
+									<a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9jNrIed7huFCu4rg?e=cO5KJj" target="_blank" class="image fit"><img src="images/Swiggy Order Analysis Banner.png" alt="" height="auto" /></a>
 									<p>Utilizing Swiggy's order data from August 2021, I conducted a comprehensive analysis focusing on user behavior, city-wise trends, ordered items, categories, and pricing. Employing slicers, I derived city-specific revenue insights and visualized the findings through bar and line charts.
 										Key Project Learnings include Proficient data cleaning techniques in Excel, Creation and utilization of pivot tables in Excel for analysis, Development of Key Performance Indicators (KPIs) and diverse visualization charts within Excel for enhanced insights.</p>
 									<ul class="actions special" style="border: none; background: none;">
@@ -296,7 +324,7 @@
 									<header>
 										<h2><a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9zGFA3oS62WBRXXg?e=pTw4DS" target="_blank" >IPL Data Analysis</a></h2>
 									</header>
-									<a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9zGFA3oS62WBRXXg?e=pTw4DS" target="_blank" class="image fit"><img src="images/IPL_DataAnalysis_Excel.JPG" alt="" height="auto"/></a>
+									<a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9zGFA3oS62WBRXXg?e=pTw4DS" target="_blank" class="image fit"><img src="images/IPL Data Analysis Banner.png" alt="" height="auto"/></a>
 									<p>I conducted an extensive analysis of IPL data spanning from 2008 to 2022, delving into match intricacies like toss decisions, venue outcomes based on batting or fielding first, and identifying top-performing players. This project involved adept data cleaning using Excel, creating a dynamic dashboard with Slicers, utilizing pivot tables for in-depth analysis, and implementing key performance indicators (KPIs) for a holistic understanding of the dataset. </p>
 									<br/><br/>
 									<ul class="actions special">

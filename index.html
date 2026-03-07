@@ -77,6 +77,47 @@
 	font-size: 20px;
 
 }*/
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-item img {
+    width: 48px;
+    height: auto;
+}
+
+.skill-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.skill-item:hover {
+    transform: translateY(-6px);
+    opacity: 1;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .skill-item img {
+        width: 40px;
+    }
+}
+
 .actions.special {
     list-style: none;
     padding: 0;
@@ -116,6 +157,308 @@
 			width: 100%; max-width: 90%; margin: 10px 10px; /* Adjust margin as needed */
         }
 	}	
+
+/* Logo box */
+.logo-box {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.experience-row:hover .logo-box img,
+.education-row:hover .logo-box img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Scroll animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== EXPERIENCE IMPACT CARDS ===== */
+
+.experience-impact,
+.education-impact {
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+}
+
+.exp-card,
+.edu-card {
+    display: flex;
+    background: #f9fafb;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover,
+.edu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* Accent bars */
+.exp-left-accent,
+.edu-left-accent {
+    width: 6px;
+    background: #1f6feb;
+}
+
+.exp-left-accent.muted {
+    background: #cbd5e1;
+}
+
+/* Active role highlight */
+.active-role {
+    border: 1px solid rgba(31,111,235,0.2);
+}
+
+/* Body */
+.exp-body,
+.edu-body {
+    padding: 30px;
+    width: 100%;
+}
+
+/* Header */
+.exp-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.exp-header img,
+.edu-body img {
+    width: 46px;
+    height: auto;
+}
+
+.exp-header h4,
+.edu-body h4 {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.exp-meta,
+.edu-body span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Badge */
+.exp-badge {
+    margin-left: auto;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    background: rgba(31,111,235,0.1);
+    color: #1f6feb;
+    font-weight: 600;
+}
+
+/* Metrics */
+.exp-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.exp-metrics span {
+    font-size: 0.8rem;
+    background: #eef2ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #1f2937;
+}
+
+/* Scroll animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .exp-metrics {
+        flex-direction: column;
+    }
+}
+#Skills,
+#Experience,
+#Education {
+    margin-top: 30px !important;
+    padding-top: 20px !important;
+}
+
+/* Reduce spacing under section headers */
+#Skills .major,
+#Experience .major,
+#Education .major
+ {
+    margin-bottom: 20px !important;
+}
+
+/* Reduce gap between sections */
+#Skills + section,
+#Experience + section,
+#Education+ section{   margin-top: 30px !important;
+}
+#Skills h3,
+#Experience h3
+#Education h3 {
+    margin-bottom: 10px !important;
+    letter-spacing: 2px;
+}
+.skills-grid img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.skills-grid img:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+.contact-elegant {
+    max-width: 1000px;
+    margin: 80px auto;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex: 1.4;
+}
+
+.contact-left h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.contact-left p {
+    line-height: 1.8;
+    color: #444;
+}
+
+.contact-right {
+    flex: 1;
+}
+
+.contact-right div {
+    margin-bottom: 28px;
+}
+
+.contact-right span {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.contact-right p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .contact-elegant {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* ===== DARK CONTACT SECTION ===== */
+
+.contact-elegant.dark {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 80px 60px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+
+    /* Let theme background show */
+    background: transparent;
+}
+
+/* LEFT SIDE */
+.contact-elegant.dark .contact-left h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-elegant.dark .contact-left p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+/* RIGHT SIDE */
+.contact-elegant.dark .contact-right span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.contact-elegant.dark .contact-right p {
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+/* Spacing */
+.contact-elegant.dark .contact-right div {
+    margin-bottom: 32px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .contact-elegant.dark {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 30px;
+    }
+}
+
+
+
+
 
 		</style>
 		<script>
@@ -232,10 +575,7 @@
 									
 									<h2><a href="#">About Me</a></h2>
 									<p style="text-align: justify;">
-										Welcome to my portfolio! I'm an aspiring data analyst driven by a passion for uncovering fascinating stories within data. Proficient in Power BI, SQL,Excel, and Python. I specialize in transforming raw information into actionable insights.
-										My journey into data analysis began during my academic pursuit in Business Analytics and expanded further through hands-on projects and continual learning in my current role as an Associate at Cognizant Technology Solutions.
-										Through self-initiated projects and dedicated learning experiences, I've honed my skills and gained practical insights into data analysis. My goal is to offer clear, practical results that enable informed decision-making.
-										Embracing a philosophy of continuous learning, I'm committed to staying updated with the latest advancements in data analysis.	
+										Welcome to my portfolio. I’m a Senior Analyst specializing in Power Automate, Power BI, SQL, VBA, and GenAI, with a strong focus on building scalable, end-to-end automation and analytics solutions. I partner with multiple internal teams and leadership stakeholders to eliminate manual effort, streamline complex workflows, improve data reliability, and deliver actionable, decision-ready insights through intelligent automation and dashboards.
 									</p>
 								</header>
 								<div class="content">
@@ -249,12 +589,129 @@
 									
 								</div>
 							</article>
+							<!-- Skills -->
+					<section class="post" id="Skills">
+						<header class="major">
+							<h3><a href="#">Skills</a></h3>
+						</header>
 
+						<div class="skills-grid">
+							<div class="skill-item"><img src="images/Power_Automate.png" alt="Power Automate"><span>Power Automate</span></div>
+							<div class="skill-item"><img src="images/PowerBI.png" alt="Power BI"><span>Power BI</span></div>
+							<div class="skill-item"><img src="images/MSSQL.png" alt="SQL"><span>SQL</span></div>
+							<div class="skill-item"><img src="images/Excel.png" alt="VBA"><span>Excel</span></div>
+							<div class="skill-item"><img src="images/Python.png" alt="Python"><span>Python</span></div>
+							<div class="skill-item"><img src="images/GenAI.png" alt="GenAI"><span>GenAI</span></div>
+							<div class="skill-item"><img src="images/HTML5.png" alt="HTML"><span>HTML</span></div>
+							<div class="skill-item"><img src="images/CSS.png" alt="CSS"><span>CSS</span></div>
+						</div>
+					</section>
+
+<!-- Experience -->
+<header class="major" id="Experience">
+    <h3>Experience</h3>
+</header>
+
+<section class="experience-impact">
+
+    <!-- Deloitte -->
+    <div class="exp-card animate-on-scroll active-role">
+        <div class="exp-left-accent"></div>
+
+        <div class="exp-body">
+            <div class="exp-header">
+                <img src="images/deloitte.png" alt="Deloitte">
+                <div>
+                    <h4>Deloitte USI</h4>
+                    <span class="exp-meta">Senior Analyst · June 2025 – Present</span>
+                </div>
+                <span class="exp-badge">Current</span>
+            </div>
+
+            <p>
+                Leading large-scale automation, analytics, and GenAI-driven initiatives across
+                enterprise teams, eliminating manual effort, improving data reliability, and
+                delivering leadership-ready insights.
+            </p>
+
+            <div class="exp-metrics">
+                <span>⚡ Power Automate Bots</span>
+                <span>🤖 End-to-end automations</span>
+                <span>📊 Exec dashboards</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cognizant -->
+    <div class="exp-card animate-on-scroll">
+        <div class="exp-left-accent muted"></div>
+
+        <div class="exp-body">
+            <div class="exp-header">
+                <img src="images/cognizant.png" alt="Cognizant">
+                <div>
+                    <h4>Cognizant Technology Solutions</h4>
+                    <span class="exp-meta">Associate · Nov 2021 – May 2025</span>
+                </div>
+            </div>
+
+            <p>
+                Delivered analytics and automation solutions improving reporting efficiency,
+                data accuracy, and decision-making across client-facing teams.
+            </p>
+
+            <div class="exp-metrics">
+                <span>📈 Reporting optimization</span>
+                <span>🗄️ SQL & data pipelines</span>
+                <span>⚙️ Process automation</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Education -->
+<header class="major" id="Education">
+    <h3>Education</h3>
+</header>
+
+<section class="education-impact">
+
+    <div class="edu-card animate-on-scroll">
+        <div class="edu-left-accent"></div>
+        <div class="edu-body">
+            <img src="images/srm.png" alt="SRM University">
+            <div>
+                <h4>MBA – Business Analytics</h4>
+                <span>SRM Institute of Science and Technology</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="edu-card animate-on-scroll">
+        <div class="edu-left-accent"></div>
+        <div class="edu-body">
+            <img src="images/GEC.png" alt="Gudlavalleru Engineering College">
+            <div>
+                <h4>B.Tech – Mechanical Engineering</h4>
+                <span>Gudlavalleru Engineering College</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+				
 						<!-- Posts -->
+						 								<header class="major">
+									<h3>Personal Projects</h3>
+								</header>
 							<section class="posts" id="Projects">
+
 								<article>
 									<header>
-										<h2><a href="AtliqMartPromotionAnalysis.html">Analysis of Atliq Mart's Promotional Campaigns</a></h2>
+										<h3><a href="AtliqMartPromotionAnalysis.html">Analysis of Atliq Mart's Promotional Campaigns</a></h3>
 									</header>
 									<a href="AtliqMartPromotionAnalysis.html" class="image fit"><img src="images/AtliqMart Analysis Banner.png" alt="" height="auto"/></a>
 									<!--<p>An analytical deep dive into Atliq Mart's promotional strategies during the Diwali 2023 and Sankranti 2024 seasons. The project utilized SQL for data preparation and Power BI for visualization, leading to actionable insights and strategic recommendations aimed at optimizing future marketing efforts and enhancing overall sales performance.</p>-->
@@ -263,21 +720,19 @@
 										<li><img src="images/PowerBI.png" alt="" /></li>							
 									</ul>
 								</article>
-								<article>
+																<article>
 									<header>
-										<h2><a href="HeartDiseaseAnalysis.html">Heart Disease Dataset Analysis</a></h2>
+										<h3><a href="YoutubeAnalysis.html">Youtube Data: Sentiment & Emoji analysis</a></h3>
 									</header>
-									<a href="HeartDiseaseAnalysis.html" class="image fit"><img src="images/Heart Disease Analysis Banner.png" alt="" height="auto" /></a>
-									<p>The Heart Disease Dataset Analysis project utilizes machine learning models to predict the presence or absence of heart disease. By using Python libraries such as Pandas, NumPy, Scikit-learn, Seaborn, and Matplotlib, the project involves data preprocessing, feature selection, model development, and evaluation. The analysis aims to provide accurate predictions and insights into the factors contributing to heart disease.</p>
+									<a href="YoutubeAnalysis.html" class="image fit"><img src="images/Youtube Data Analysis Banner.png" alt=""  height="auto"/></a>
+									<p>The YouTube Data Analysis project leverages Python to perform in-depth analysis of YouTube comments. By using libraries such as Pandas, NumPy, TextBlob, and Matplotlib, the project cleans and processes the data, conducts sentiment analysis, and generates word clouds and emoji frequency visualizations. This analysis provides insights into user sentiments, popular keywords, and emoji usage patterns in YouTube interactions.</p>
 									<ul class="actions special">
-										<li><img src="images/Python.png" alt="" /></li>
+										<li><img src="images/Python.png" alt="" /></li>							
 									</ul>
 								</article>
-
-								
 								<article>
 									<header>
-										<h2><a href="TelanganaGovernmentAnalysis.html">Unlocking Growth: Strategic Insights for Telangana Government</a></h2>
+										<h3><a href="TelanganaGovernmentAnalysis.html">Unlocking Growth: Strategic Insights for Telangana Government</a></h3>
 									</header>
 									<a href="TelanganaGovernmentAnalysis.html" class="image fit"><img src="images/Telanagana Banner.png" alt=""  height="auto"/></a>
 									<p>Passionate about data-driven insights, I participated in Code Basics Resume Project Challenge 7 with the 
@@ -288,8 +743,8 @@
 								</article>
 								<article>	
 									<header>
-										<h2><a href="CodeX.html">Provide Insights to the Marketing Team in Food & Beverage Industry
-										</a></h2>
+										<h3><a href="CodeX.html">Provide Insights to the Marketing Team in Food & Beverage Industry
+										</a></h3>
 									</header>
 									<a href="CodeX.html" class="image fit"><img src="images/CodeX Banner.png" alt="" height="auto" /></a>
 									<p>Focused on data-driven marketing analysis, I contributed to CodeX's expansion strategy for the 
@@ -300,61 +755,7 @@
 									</ul>
 								</article>
 								
-								<article>
-									<header>
-										<h2><a href="Dannys_Dinner.html">Dannys Dinner<br />
-										</a></h2>
-									</header>
-									<a href="Dannys_Dinner.html" class="image fit"><img src="images/Dannys Dinner Banner.png" alt="" height="auto"/></a>
-									<p>Within the framework of Danny Ma's 8 Week SQL Challenge, I have successfully accomplished the Initial Challenge, focusing on Danny's Dinner. Throughout this endeavor, I methodically navigated a sophisticated data environment, utilizing Common Table Expressions (CTEs), aggregate functions, and window functions to derive actionable insights from a restaurant's database. This practical engagement significantly enhanced my problem-solving acumen and enriched my comprehension of database management. </p>
-									<ul class="actions special">
-										<li><img src="images/SQL.png" alt="" /></li>
 
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="Pizza Runner.html">Pizza Runner<br />
-										</a></h2>
-									</header>
-									<a href="Pizza Runner.html" class="image fit"><img src="images/Pizza Runner Banner.png" alt="" height="auto"/></a>
-									<p>Successfully addressing the #PizzaRunnerChallenge in Danny Ma's #8WeekSQLChallenge, my focus was on refining Pizza Runner's operations through data science. Rigorous data cleansing ensured precision in analyses, contributing to strategic decision-making. The findings encompass a devoted customer base, operational nuances, delivery dynamics, and a detailed financial snapshot.<br/><br/><br/></p>
-									<ul class="actions special">
-										<li><img src="images/SQL.png" alt="" /></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9jNrIed7huFCu4rg?e=cO5KJj" target="_blank" >Swiggy Order Analysis</a></h2>
-									</header>
-									<a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9jNrIed7huFCu4rg?e=cO5KJj" target="_blank" class="image fit"><img src="images/Swiggy Order Analysis Banner.png" alt="" height="auto" /></a>
-									<p>Utilizing Swiggy's order data from August 2021, I conducted a comprehensive analysis focusing on user behavior, city-wise trends, ordered items, categories, and pricing. Employing slicers, I derived city-specific revenue insights and visualized the findings through bar and line charts.
-										Key Project Learnings include Proficient data cleaning techniques in Excel, Creation and utilization of pivot tables in Excel for analysis, Development of Key Performance Indicators (KPIs) and diverse visualization charts within Excel for enhanced insights.</p>
-									<ul class="actions special" style="border: none; background: none;">
-										<li><img src="images/Excel.png" alt="" /></a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9zGFA3oS62WBRXXg?e=pTw4DS" target="_blank" >IPL Data Analysis</a></h2>
-									</header>
-									<a href="https://1drv.ms/x/s!Akih6QLLmdZ5ge9zGFA3oS62WBRXXg?e=pTw4DS" target="_blank" class="image fit"><img src="images/IPL Data Analysis Banner.png" alt="" height="auto"/></a>
-									<p>I conducted an extensive analysis of IPL data spanning from 2008 to 2022, delving into match intricacies like toss decisions, venue outcomes based on batting or fielding first, and identifying top-performing players. This project involved adept data cleaning using Excel, creating a dynamic dashboard with Slicers, utilizing pivot tables for in-depth analysis, and implementing key performance indicators (KPIs) for a holistic understanding of the dataset. </p>
-									<br/><br/>
-									<ul class="actions special">
-										<li><img src="images/Excel.png" alt="" /></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="YoutubeAnalysis.html">Sentiment & Emoji analysis</a></h2>
-									</header>
-									<a href="YoutubeAnalysis.html" class="image fit"><img src="images/Youtube Data Analysis Banner.png" alt=""  height="auto"/></a>
-									<p>The YouTube Data Analysis project leverages Python to perform in-depth analysis of YouTube comments. By using libraries such as Pandas, NumPy, TextBlob, and Matplotlib, the project cleans and processes the data, conducts sentiment analysis, and generates word clouds and emoji frequency visualizations. This analysis provides insights into user sentiments, popular keywords, and emoji usage patterns in YouTube interactions.</p>
-									<ul class="actions special">
-										<li><img src="images/Python.png" alt="" /></li>							
-									</ul>
-								</article>
 							</section>
 
 						<!-- Footer 
@@ -373,35 +774,34 @@
 							</footer> -->
 
 					</div>
+					<section class="contact-elegant dark">
+    <div class="contact-left">
+        <h3>Let’s Work Together</h3>
+        <p>
+            I design automation, analytics, and GenAI-driven solutions that help teams work smarter,
+            faster, and with greater confidence in their data. With experience delivering scalable
+            insights across enterprise environments, I focus on reducing manual effort, improving
+            decision quality, and building systems leaders can trust.
+        </p>
+    </div>
+
+    <div class="contact-right">
+        <div>
+            <span>Location</span>
+            <p>Andhra Pradesh, India</p>
+        </div>
+        <div>
+            <span>Email</span>
+            <p>nagasai836@gmail.com</p>
+        </div>
+        <div>
+            <span>Phone</span>
+            <p>+91 77021 00599</p>
+        </div>
+    </div>
+</section>
 
 				
-					<footer id="footer">
-						<br/>
-
-
-						<p class="footerpar">
-							As a skilled Data Analyst and Business Analyst, I specialize in 
-							uncovering valuable insights from complex datasets. Whether you're 
-							looking to refine data strategies, optimize operations, or gain a 
-							competitive edge, I'm here to assist you. Feel free to reach out for
-							 expert guidance on leveraging data for business success.</p>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Andhra Pradesh,
-								 PIN : 521136</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p>+91 7702100599</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>nagasai1836@gmail.com</p>
-							</section>
-
-						</section>
-					</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -418,6 +818,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const elements = document.querySelectorAll(".animate-on-scroll");
+
+				const observer = new IntersectionObserver(entries => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+						}
+					});
+				}, { threshold: 0.15 });
+
+				elements.forEach(el => observer.observe(el));
+			});
+			</script>
 
 	</body>
 </html>
